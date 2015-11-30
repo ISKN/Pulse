@@ -18,7 +18,7 @@ The user first learns to keep the beat and then is allowed to play drums on top 
   4. link to iskn API (Pulse\src\Slate\ISKN_API) and don't forget to copy the shared lib to your PATH or next to the binary
  
 ### How to use
-Compile and run. Read further how to place the Slate.  
+Place the Slate in landscape mode with the buttons behind you, compile and run.
 If you want to change the song, go to Pulse/bin/data and edit settings.ini.
 
 ### Remarks about changing the song
