@@ -1,0 +1,2 @@
+ofxRing
+ofxSplashScreen

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxRing\src\ofxRing.cpp">
+      <Filter>addons\ofxRing\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxSplashScreen\src\ofxSplashScreen.cpp">
+      <Filter>addons\ofxSplashScreen\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Common\Circle.cpp" />
+    <ClCompile Include="src\Common\Drum.cpp" />
+    <ClCompile Include="src\Common\Level.cpp" />
+    <ClCompile Include="src\Common\Ribbon.cpp" />
+    <ClCompile Include="src\Common\Scene.cpp" />
+    <ClCompile Include="src\Graphics\Curve.cpp" />
+    <ClCompile Include="src\Graphics\Interpolation.cpp" />
+    <ClCompile Include="src\Graphics\Spline.cpp" />
+    <ClCompile Include="src\Level1\Level1.cpp" />
+    <ClCompile Include="src\Level2\Level2.cpp" />
+    <ClCompile Include="src\Menu\Menu.cpp" />
+    <ClCompile Include="src\Slate\Slate.cpp" />
+    <ClCompile Include="src\UI\Bttn.cpp" />
+    <ClCompile Include="src\UI\FontManager.cpp" />
+    <ClCompile Include="src\UI\Graph.cpp" />
+    <ClCompile Include="src\UI\Language.cpp" />
+    <ClCompile Include="src\UI\ScoreDisplay.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxVoronoi2D\src\VoronoiDiagramGenerator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxRing">
+      <UniqueIdentifier>{443F699F-98F7-FC7E-3358-3069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxRing\src">
+      <UniqueIdentifier>{93AC42BC-E8BD-623C-1C0E-AC1E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxSplashScreen">
+      <UniqueIdentifier>{98FE2396-46F9-5720-466F-1F45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxSplashScreen\src">
+      <UniqueIdentifier>{58003DEF-21B7-2917-3910-BC1D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxRing\src\ofxRing.h">
+      <Filter>addons\ofxRing\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxSplashScreen\src\ofxSplashScreen.h">
+      <Filter>addons\ofxSplashScreen\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\Circle.h" />
+    <ClInclude Include="src\Common\Drum.h" />
+    <ClInclude Include="src\Common\Level.h" />
+    <ClInclude Include="src\Common\Ribbon.h" />
+    <ClInclude Include="src\Common\Scene.h" />
+    <ClInclude Include="src\Graphics\Curve.hpp" />
+    <ClInclude Include="src\Graphics\Interpolation.h" />
+    <ClInclude Include="src\Graphics\Spline.h" />
+    <ClInclude Include="src\Level1\Level1.h" />
+    <ClInclude Include="src\Level2\Level2.h" />
+    <ClInclude Include="src\Menu\Menu.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventAccelerometer.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventDescription.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventDiskStatus.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventError.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventFileContent.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventFileContents.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventFileDescriptor.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventFileOperation.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventHardware.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventObject3D.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventPen2D.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventPen3D.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventSoftware.h" />
+    <ClInclude Include="src\Slate\API\include\Events\EventStatus.h" />
+    <ClInclude Include="src\Slate\API\include\Device.h" />
+    <ClInclude Include="src\Slate\API\include\Error.h" />
+    <ClInclude Include="src\Slate\API\include\Event.h" />
+    <ClInclude Include="src\Slate\API\include\FileInfo.h" />
+    <ClInclude Include="src\Slate\API\include\FileSystem.h" />
+    <ClInclude Include="src\Slate\API\include\GlobalDefines.h" />
+    <ClInclude Include="src\Slate\API\include\ISKN_API.h" />
+    <ClInclude Include="src\Slate\API\include\isknDate.h" />
+    <ClInclude Include="src\Slate\API\include\isknTime.h" />
+    <ClInclude Include="src\Slate\API\include\LanguageId.h" />
+    <ClInclude Include="src\Slate\API\include\Listener.h" />
+    <ClInclude Include="src\Slate\API\include\Rect.h" />
+    <ClInclude Include="src\Slate\API\include\Size.h" />
+    <ClInclude Include="src\Slate\API\include\SlateManager.h" />
+    <ClInclude Include="src\Slate\API\include\Vector2D.h" />
+    <ClInclude Include="src\Slate\API\include\Vector3D.h" />
+    <ClInclude Include="src\Slate\Slate.h" />
+    <ClInclude Include="src\Tools\FixedSizeList.hpp" />
+    <ClInclude Include="src\UI\Bttn.h" />
+    <ClInclude Include="src\UI\FontManager.h" />
+    <ClInclude Include="src\UI\Graph.h" />
+    <ClInclude Include="src\UI\Language.h" />
+    <ClInclude Include="src\UI\ScoreDisplay.h" />
+    <ClInclude Include="src\general.h" />
+    <ClInclude Include="..\..\..\addons\ofxVoronoi2D\src\ofxVoronoi2D.h" />
+    <ClInclude Include="..\..\..\addons\ofxVoronoi2D\src\VoronoiDiagramGenerator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+</Project>
