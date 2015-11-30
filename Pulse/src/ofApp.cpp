@@ -194,6 +194,7 @@ void ofApp::draw()
 {
 	if (_loaded)
 	{
+#ifdef ENABLE_BACKGROUND
 		_background.begin();
 
 			_background.setUniform1f("time", ofGetElapsedTimef()*0.3);
@@ -204,6 +205,10 @@ void ofApp::draw()
 			ofRect(0, 0, WIDTH, HEIGHT);
 
 		_background.end();
+#else
+		ofSetColor(0);
+		ofRect(0, 0, WIDTH, HEIGHT);
+#endif
 
 		_parts[_partNum]->draw();
 	}

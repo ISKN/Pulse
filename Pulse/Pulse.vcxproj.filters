@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="src\ofApp.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\main.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -19,24 +13,61 @@
     <ClCompile Include="..\..\..\addons\ofxSplashScreen\src\ofxSplashScreen.cpp">
       <Filter>addons\ofxSplashScreen\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Common\Circle.cpp" />
-    <ClCompile Include="src\Common\Drum.cpp" />
-    <ClCompile Include="src\Common\Level.cpp" />
-    <ClCompile Include="src\Common\Ribbon.cpp" />
-    <ClCompile Include="src\Common\Scene.cpp" />
-    <ClCompile Include="src\Graphics\Curve.cpp" />
-    <ClCompile Include="src\Graphics\Interpolation.cpp" />
-    <ClCompile Include="src\Graphics\Spline.cpp" />
-    <ClCompile Include="src\Level1\Level1.cpp" />
-    <ClCompile Include="src\Level2\Level2.cpp" />
-    <ClCompile Include="src\Menu\Menu.cpp" />
-    <ClCompile Include="src\Slate\Slate.cpp" />
-    <ClCompile Include="src\UI\Bttn.cpp" />
-    <ClCompile Include="src\UI\FontManager.cpp" />
-    <ClCompile Include="src\UI\Graph.cpp" />
-    <ClCompile Include="src\UI\Language.cpp" />
-    <ClCompile Include="src\UI\ScoreDisplay.cpp" />
     <ClCompile Include="..\..\..\addons\ofxVoronoi2D\src\VoronoiDiagramGenerator.cpp" />
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\Bttn.cpp">
+      <Filter>src\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\FontManager.cpp">
+      <Filter>src\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\Language.cpp">
+      <Filter>src\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\ScoreDisplay.cpp">
+      <Filter>src\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Slate\Slate.cpp">
+      <Filter>src\Slate</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Parts\Level2.cpp">
+      <Filter>src\Parts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Parts\Menu.cpp">
+      <Filter>src\Parts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Parts\Level1.cpp">
+      <Filter>src\Parts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Graphics\Interpolation.cpp">
+      <Filter>src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Graphics\Spline.cpp">
+      <Filter>src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Graphics\Curve.cpp">
+      <Filter>src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Common\Drum.cpp">
+      <Filter>src\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Common\Level.cpp">
+      <Filter>src\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Common\Ribbon.cpp">
+      <Filter>src\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Common\Scene.cpp">
+      <Filter>src\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Common\Circle.cpp">
+      <Filter>src\Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -57,11 +88,26 @@
     <Filter Include="addons\ofxSplashScreen\src">
       <UniqueIdentifier>{58003DEF-21B7-2917-3910-BC1D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\UI">
+      <UniqueIdentifier>{3519a1c5-8809-4f24-a7fb-c04a2ab0f871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Tools">
+      <UniqueIdentifier>{a3a84f23-7ebb-4c7b-9620-e5c30b246561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Slate">
+      <UniqueIdentifier>{a21a619e-a288-44c5-b12f-3545bc817c3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Parts">
+      <UniqueIdentifier>{1978e2cf-3adf-428d-b832-081917524a80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Graphics">
+      <UniqueIdentifier>{b55623bf-4f5c-4d46-b116-663bf045161b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Common">
+      <UniqueIdentifier>{f2f65330-29b5-4e87-8602-ebe0d4cb987f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ofApp.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -71,17 +117,6 @@
     <ClInclude Include="..\..\..\addons\ofxSplashScreen\src\ofxSplashScreen.h">
       <Filter>addons\ofxSplashScreen\src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Common\Circle.h" />
-    <ClInclude Include="src\Common\Drum.h" />
-    <ClInclude Include="src\Common\Level.h" />
-    <ClInclude Include="src\Common\Ribbon.h" />
-    <ClInclude Include="src\Common\Scene.h" />
-    <ClInclude Include="src\Graphics\Curve.hpp" />
-    <ClInclude Include="src\Graphics\Interpolation.h" />
-    <ClInclude Include="src\Graphics\Spline.h" />
-    <ClInclude Include="src\Level1\Level1.h" />
-    <ClInclude Include="src\Level2\Level2.h" />
-    <ClInclude Include="src\Menu\Menu.h" />
     <ClInclude Include="src\Slate\API\include\Events\EventAccelerometer.h" />
     <ClInclude Include="src\Slate\API\include\Events\EventDescription.h" />
     <ClInclude Include="src\Slate\API\include\Events\EventDiskStatus.h" />
@@ -112,16 +147,65 @@
     <ClInclude Include="src\Slate\API\include\SlateManager.h" />
     <ClInclude Include="src\Slate\API\include\Vector2D.h" />
     <ClInclude Include="src\Slate\API\include\Vector3D.h" />
-    <ClInclude Include="src\Slate\Slate.h" />
-    <ClInclude Include="src\Tools\FixedSizeList.hpp" />
-    <ClInclude Include="src\UI\Bttn.h" />
-    <ClInclude Include="src\UI\FontManager.h" />
-    <ClInclude Include="src\UI\Graph.h" />
-    <ClInclude Include="src\UI\Language.h" />
-    <ClInclude Include="src\UI\ScoreDisplay.h" />
-    <ClInclude Include="src\general.h" />
     <ClInclude Include="..\..\..\addons\ofxVoronoi2D\src\ofxVoronoi2D.h" />
     <ClInclude Include="..\..\..\addons\ofxVoronoi2D\src\VoronoiDiagramGenerator.h" />
+    <ClInclude Include="src\general.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UI\Bttn.h">
+      <Filter>src\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UI\FontManager.h">
+      <Filter>src\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UI\Language.h">
+      <Filter>src\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UI\ScoreDisplay.h">
+      <Filter>src\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tools\FixedSizeList.hpp">
+      <Filter>src\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Slate\Slate.h">
+      <Filter>src\Slate</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Parts\Level1.h">
+      <Filter>src\Parts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Parts\Level2.h">
+      <Filter>src\Parts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Parts\Menu.h">
+      <Filter>src\Parts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graphics\Interpolation.h">
+      <Filter>src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graphics\Spline.h">
+      <Filter>src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graphics\Curve.hpp">
+      <Filter>src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\Circle.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\Drum.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\Level.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\Ribbon.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\Scene.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

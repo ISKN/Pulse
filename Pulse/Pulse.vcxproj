@@ -174,6 +174,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\addons\ofxVoronoi2D\src\VoronoiDiagramGenerator.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxRing\src\ofxRing.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSplashScreen\src\ofxSplashScreen.cpp" />
     <ClCompile Include="src\Common\Circle.cpp" />
     <ClCompile Include="src\Common\Drum.cpp" />
     <ClCompile Include="src\Common\Level.cpp" />
@@ -182,13 +184,11 @@
     <ClCompile Include="src\Graphics\Curve.cpp" />
     <ClCompile Include="src\Graphics\Interpolation.cpp" />
     <ClCompile Include="src\Graphics\Spline.cpp" />
-    <ClCompile Include="src\Level1\Level1.cpp" />
-    <ClCompile Include="src\Level2\Level2.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Menu\Menu.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
-    <ClCompile Include="..\..\..\addons\ofxRing\src\ofxRing.cpp" />
-    <ClCompile Include="..\..\..\addons\ofxSplashScreen\src\ofxSplashScreen.cpp" />
+    <ClCompile Include="src\Parts\Level1.cpp" />
+    <ClCompile Include="src\Parts\Level2.cpp" />
+    <ClCompile Include="src\Parts\Menu.cpp" />
     <ClCompile Include="src\Slate\Slate.cpp" />
     <ClCompile Include="src\UI\Bttn.cpp" />
     <ClCompile Include="src\UI\FontManager.cpp" />
@@ -198,6 +198,8 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\addons\ofxVoronoi2D\src\ofxVoronoi2D.h" />
     <ClInclude Include="..\..\..\addons\ofxVoronoi2D\src\VoronoiDiagramGenerator.h" />
+    <ClInclude Include="..\..\..\addons\ofxRing\src\ofxRing.h" />
+    <ClInclude Include="..\..\..\addons\ofxSplashScreen\src\ofxSplashScreen.h" />
     <ClInclude Include="src\Common\Circle.h" />
     <ClInclude Include="src\Common\Drum.h" />
     <ClInclude Include="src\Common\Level.h" />
@@ -207,12 +209,10 @@
     <ClInclude Include="src\Graphics\Curve.hpp" />
     <ClInclude Include="src\Graphics\Interpolation.h" />
     <ClInclude Include="src\Graphics\Spline.h" />
-    <ClInclude Include="src\Level1\Level1.h" />
-    <ClInclude Include="src\Level2\Level2.h" />
-    <ClInclude Include="src\Menu\Menu.h" />
     <ClInclude Include="src\ofApp.h" />
-    <ClInclude Include="..\..\..\addons\ofxRing\src\ofxRing.h" />
-    <ClInclude Include="..\..\..\addons\ofxSplashScreen\src\ofxSplashScreen.h" />
+    <ClInclude Include="src\Parts\Level1.h" />
+    <ClInclude Include="src\Parts\Level2.h" />
+    <ClInclude Include="src\Parts\Menu.h" />
     <ClInclude Include="src\Slate\API\include\Device.h" />
     <ClInclude Include="src\Slate\API\include\Error.h" />
     <ClInclude Include="src\Slate\API\include\Event.h" />

@@ -49,8 +49,6 @@ class Scene
 		bool buttonIsRegistered(Bttn * button) const;
 		void clearButtons();
 
-		void notifyMainLog(std::string const & text);
-
 		std::list<Bttn*> _buttons;
 
 		bool _enabled;

@@ -1,6 +1,8 @@
 # Pulse : a musical example for the Slate
 By Pierre Schefler for iskn.
 
+![Pulse screenshot](screenshot.png "Pulse screenshot")
+
 ## General information
 
 ### Description
@@ -9,16 +11,16 @@ The user first learns to keep the beat and then is allowed to play drums on top 
 
 ### Installation
 1. Download openframeworks here: http://openframeworks.cc/download/ (on windows, prefer visual studio to qt creator for OF but both should work fine).
-2. Copy the 'Pulse' folder inside 'apps/myApps'.
-3. Try to start the project corresponding to your IDE and platform (linux : qt creator ; win : visual studio ; os x : xcode).
-4. If the project doesn't compile or if the one you need doesn't exist, just create it:
-  1. copy the addons you will find in 'Addons' to openframeworks/addons
-  2. try openframeworks' project generator (don't forget to tick the addons) or create a raw project and include all of OF sources and the project's sources
-  3. add the include folder of the API corresponding to your platform (Pulse\src\Slate\ISKN_API) to the include directories of your project
-  4. link to iskn API (Pulse\src\Slate\ISKN_API) and don't forget to copy the shared lib to your PATH or next to the binary
+2. Copy the addons you will find in 'Addons' to openframeworks/addons.
+3. Copy the 'Pulse' folder inside 'apps/myApps'.
+4. Try to start the project corresponding to your IDE and platform (linux : qt creator ; win : visual studio ; os x : xcode).
+5. If the project doesn't compile or if the one you need doesn't exist, just create it:
+  1. try openframeworks' project generator (don't forget to tick the addons: ofxRing, ofxSplashScreen, ofxVoronoi2D) or create a raw project and include all of OF sources and the project's sources (except iskn API located in Pulse/src/Slate)
+  2. add the include folder of the API corresponding to your platform (Pulse/src/Slate/ISKN_API) to the include directories of your project
+  3. link to iskn API (Pulse/src/Slate/ISKN_API) and don't forget to copy the shared lib to your PATH or next to the binary (which should be in Pulse/bin)
  
 ### How to use
-Place the Slate in landscape mode with the buttons behind you, compile and run.
+Place the Slate in landscape mode with the buttons behind it, compile and run.
 If you want to change the song, go to Pulse/bin/data and edit settings.ini.
 
 ### Remarks about changing the song
@@ -30,6 +32,26 @@ There are a few things you should take care of when setting up another song:
 
 ### License
 This example is licensed under the Do What The Fuck You Want Public License.
+
+### Troubleshooting
+**My project won't compile.**  
+Make sure you followed all the steps described in "installation" (downloaded openFrameworks, copied the addons, linked to the api, etc.).  
+  
+**The example starts but immediately exits.**  
+You have to plug the Slate in, or the program will close. If the Slate is indeed connected to your computer, make sure you have the drivers installed (on Windows). Otherwise, fill in a bug report.  
+ 
+**I want to try the example but I don't have my Slate.**
+Go to 'src/general.h' and uncomment `#define REPLACE_SLATE_BY_MOUSE`. Recompile and run. You will be able to use the software with your mouse replacing the Slate.
+
+**The example starts but it doesn't look like the screenshot and there is no sound.**
+Verify that the 'data' folder located in 'Pulse/bin' is next to your binary. It contains all the resources the program needs to correctly run.
+
+**I don't understand how to navigate inside the example.**
+First make sure the Slate is correctly oriented (landscape mode, buttons on the back). If the problem is the height, you may want to update your Slate with the 3D firmware which allows a wider tracking.
+
+**The program is slow.**
+Maybe your GPU isn't powerful enough. If you're on a laptop, you can try forcing your PC to use the GPU instead of the chipset (on windows: right click -> run with graphics processor).
+If it's still too slow, open 'src/general.h' and comment `#define ENABLE_BACKGROUND`. Recompile and run. This will disable the background, which is probably the source of your problems.
 
 ### TODO
 * Finish commenting stuff

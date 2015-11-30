@@ -88,37 +88,3 @@ void Scene::clearButtons()
 {
 	_buttons.clear();
 }
-
-void Scene::notifyMainLog(std::string const & text)
-{
-	ofXml logFile;
-
-	if (!logFile.load(ofToDataPath("../../logs/mainLog.xml")))
-	{
-		ERROR_MSG("No log file was found! Creating one");
-		logFile.addChild("SceneEvents");
-	}
-	else
-	{
-		if (!logFile.exists("SceneEvents"))
-		{
-			DEBUG_MSG("Log file existed for level but no entry was found");
-			logFile.addChild("SceneEvents");
-		}
-
-		//scoreFile.setTo("Scores");
-
-		logFile.addChild("Event");
-		logFile.setToChild(logFile.getNumChildren() - 1);
-
-		std::stringstream date;
-		date << std::setfill('0') << std::setw(2) << ofGetDay() << "/" << ofGetMonth() << "/" << ofGetYear() << " - " << ofGetHours() << ":" << ofGetMinutes() << ":" << ofGetSeconds();
-		logFile.addValue("Date", date.str());
-
-		logFile.addValue("Description", text);
-
-		DEBUG_MSG("Saving new entry for main log on " << date.str());
-	}
-
-	logFile.save(ofToDataPath("../../logs/mainLog.xml"));
-}

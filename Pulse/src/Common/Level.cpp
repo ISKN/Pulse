@@ -490,21 +490,12 @@ void Level::saveNewScore(int score)
 void Level::eventExit()
 {
 	_tune.stop();
-
-	std::stringstream ss;
-	ss << "LEVEL " << _levelNumber << " exit";
-	notifyMainLog(ss.str());
-
 	_levelActive = false;
 	ofNotifyEvent(exitLevel);
 }
 
 void Level::eventStart()
 {
-	std::stringstream ss;
-	ss << "LEVEL " << _levelNumber << " start";
-	notifyMainLog(ss.str());
-
 	_levelActive = true;
 	_introIsActive = false;
 	_outroIsActive = false;
@@ -525,14 +516,8 @@ void Level::eventNext()
 void Level::eventLevelFinished()
 {
 	_tune.stop();
-
-	std::stringstream ss;
-	ss << "LEVEL " << _levelNumber << " finished";
-	notifyMainLog(ss.str());
-
 	_levelActive = false;
-	//Stop player
-
+	
 	DEBUG_MSG("Level ended with score " << _score);
 
 	//Activate outro

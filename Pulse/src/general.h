@@ -27,24 +27,33 @@
 
 #include "Tools/FixedSizeList.hpp"
 
+/**********************************/
+/* Parameters that you can change */
+/**********************************/
+
 //Display
 #define WINDOW_WIDTH 1600
 #define WINDOW_HEIGHT 900
 #define USE_SPLASH_SCREEN //Displays the iskn logo while the software starts
 #define FULLSCREEN_MODE
+#define ENABLE_BACKGROUND
 
 //Slate
 //#define REPLACE_SLATE_BY_MOUSE //If enabled, the slate won't be used and will be replaced by the mouse
-
-//Display
-#define WIDTH ofGetWidth()
-#define HEIGHT ofGetHeight()
 
 //Fonts
 #define FONT_REGULAR "fonts/Muli-Regular.ttf"
 #define FONT_LIGHT   "fonts/Muli-Light.ttf"
 #define FONT_FUN     "fonts/ObelixPro-cyr.ttf"
 #define FONT_TITLE   "fonts/Adamas-Regular.ttf"
+
+/***********************************************************/
+/* Constants and other things you might not want to change */
+/***********************************************************/
+
+//Display
+#define WIDTH ofGetWidth()
+#define HEIGHT ofGetHeight()
 
 //Useful stuff
 #define TEMPO_TO_MS(x) std::round(60000/(double)(x))

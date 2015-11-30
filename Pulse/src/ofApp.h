@@ -6,15 +6,19 @@
 
 #pragma once
 
+/* Description:
+ * This class is the most basic class of openFrameworks which contains all the code that will be called: setup at the beginning, then update and draw at each frame, and exit at the end.
+ */
+
 #include "general.h"
 
 #include "UI/Language.h"
 #include "UI/FontManager.h"
 #include "Slate/Slate.h"
 
-#include "Menu/Menu.h"
-#include "Level1/Level1.h"
-#include "Level2/Level2.h"
+#include "Parts/Menu.h"
+#include "Parts/Level1.h"
+#include "Parts/Level2.h"
 
 #include "ofxSplashScreen.h"
 
@@ -64,7 +68,7 @@ class ofApp : public ofBaseApp
         int _partNum;									//Current part index (part 0 is the menu, part 1 is level1, etc).
         void changePart(int & part);					//Disable current part and enable new one.
         void exitCurrentPart();							//Go to menu.
-		void goToNextPart();							//GO to next part (goes back to the first one if we're at the last one).
+		void goToNextPart();							//Go to next part (goes back to the first one if we're at the last one).
 		
         Menu _menu;										
 		Level1 _level1;
