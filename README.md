@@ -40,16 +40,16 @@ Make sure you followed all the steps described in "installation" (downloaded ope
 **The example starts but immediately exits.**  
 You have to plug the Slate in, or the program will close. If the Slate is indeed connected to your computer, make sure you have the drivers installed (on Windows). Otherwise, fill in a bug report.  
  
-**I want to try the example but I don't have my Slate.**
+**I want to try the example but I don't have my Slate.**  
 Go to 'src/general.h' and uncomment `#define REPLACE_SLATE_BY_MOUSE`. Recompile and run. You will be able to use the software with your mouse replacing the Slate.
 
-**The example starts but it doesn't look like the screenshot and there is no sound.**
+**The example starts but it doesn't look like the screenshot and there is no sound.**  
 Verify that the 'data' folder located in 'Pulse/bin' is next to your binary. It contains all the resources the program needs to correctly run.
 
-**I don't understand how to navigate inside the example.**
+**I don't understand how to navigate inside the example.**  
 First make sure the Slate is correctly oriented (landscape mode, buttons on the back). If the problem is the height, you may want to update your Slate with the 3D firmware which allows a wider tracking.
 
-**The program is slow.**
+**The program is slow.**  
 Maybe your GPU isn't powerful enough. If you're on a laptop, you can try forcing your PC to use the GPU instead of the chipset (on windows: right click -> run with graphics processor).
 If it's still too slow, open 'src/general.h' and comment `#define ENABLE_BACKGROUND`. Recompile and run. This will disable the background, which is probably the source of your problems.
 
