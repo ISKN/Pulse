@@ -47,6 +47,10 @@ class Level1 : public Level
 
 		//Debug
 		ofSoundPlayer _debug;
+
+	private:
+
+		bool _debugTick;
 };
 
 #endif // LEVEL1_H

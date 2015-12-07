@@ -15,9 +15,18 @@ void Level1::setupMain()
 {
 	_drums.push_back(new Drum(ofVec2f(WIDTH / 2, HEIGHT / 2), true, _levelColor, ofToDataPath("drums/tick.wav")));
 
-#ifdef DEBUG_TEMPO
-	_debug.load(ofToDataPath("drums/tick.wav"));
-#endif
+	try
+	{
+		_debugTick = (bool)std::stoi(getSetting("debug", "tick"));
+	}
+	catch (std::exception & e)
+	{
+		ERROR_MSG("Cannot get tick setting: '" << e.what() << "' -> disabling debug feature by default");
+		_debugTick = false;
+	}
+
+	if (_debugTick)
+		_debug.load(ofToDataPath("drums/tick.wav"));
 }
 
 void Level1::updateMain()
@@ -29,9 +38,8 @@ void Level1::updateMain()
 		_lastBeat = now - (now - _lastBeat - _period); //Include the delay if we're a bit late (will surely happen)
 		_resetLastBeatCheck = false;
 
-	#ifdef DEBUG_TEMPO
+	if (_debugTick)
 		_debug.play();
-	#endif
 	}
 
 	//Check if we just crossed half the last cue time

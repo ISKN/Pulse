@@ -1,0 +1,5 @@
+> The 'SettingsTool' directory contains the source. You need Qt5 to compile (project was made with QtCreator).
+
+> A release version for Windows is available in the 'Releases' folder.
+
+> You can use the files located in 'TestFiles' to try the software.

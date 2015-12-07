@@ -181,6 +181,7 @@
     <ClCompile Include="src\Common\Level.cpp" />
     <ClCompile Include="src\Common\Ribbon.cpp" />
     <ClCompile Include="src\Common\Scene.cpp" />
+    <ClCompile Include="src\general.cpp" />
     <ClCompile Include="src\Graphics\Curve.cpp" />
     <ClCompile Include="src\Graphics\Interpolation.cpp" />
     <ClCompile Include="src\Graphics\Spline.cpp" />

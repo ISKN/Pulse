@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PulseSettings>
+
+	<song		path="song.mp3" 	tempo="166" 	volume="0.81" />
+	
+	<display 	width="1024" 		height="768" 	fullscreen="0" 		background="1" />
+	
+	<debug 		mouse="1" 			tick="0" />
+
+</PulseSettings>

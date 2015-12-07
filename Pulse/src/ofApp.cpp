@@ -12,12 +12,6 @@ extern Tempo songTempo; //Same here
 //--------------------------------------------------------------
 void ofApp::setup2()
 {
-	//Log
-	ofSetLogLevel(OF_LOG_NOTICE);
-	std::stringstream logName;
-	logName << "logs/log_" << std::setfill('0') << std::setw(2) << ofGetDay() << "-" << ofGetMonth() << "-" << ofGetYear() << "--" << ofGetHours() << "-" << ofGetMinutes() << "-" << ofGetSeconds() << ".txt";
-	ofLogToFile(ofToDataPath(logName.str()), false);
-
 	//Start
 	DEBUG_MSG("Starting setup...");
 
@@ -64,10 +58,11 @@ void ofApp::setup2()
 	}
 
 	//Slates
-	#ifndef REPLACE_SLATE_BY_MOUSE
-	setupSlate();
-	//ofAddListener(_slate->newPoint, this, &ofApp::receivePoint);
-	#endif
+	if (!_replaceSlateByMouse)
+	{
+		setupSlate();
+		//ofAddListener(_slate->newPoint, this, &ofApp::receivePoint);
+	}
 
 	//Various listeners
     ofAddListener(_menu.eventChangePart, this, &ofApp::changePart);
@@ -90,47 +85,64 @@ void ofApp::setup2()
 
 void ofApp::getMainParams()
 {
-	DEBUG_MSG("Loading main parameters");
+	DEBUG_MSG("Loading main settings");
 
-	//Get lines from settings file
-	std::ifstream inputStream(ofToDataPath("settings.ini").c_str(), std::ifstream::in);
 
-	if (!inputStream.is_open())
-		ERROR_QUIT("Cannot find parameters file '" << ofToDataPath("settings.ini") << "'");
-
-	std::vector<std::string> lines;
-
-	while (inputStream.good())
+	//Song
+	try
 	{
-		std::string line;
-		std::getline(inputStream, line);
-		lines.push_back(line);
+		_audioFileName = getSetting("song", "path");
+	}
+	catch (std::exception & e)
+	{
+		ERROR_QUIT("Cannot get song path: '" << e.what() << "' -> exiting");
 	}
 
-	//Get audio file
-	if (lines[0][0] != '#')
-		ERROR_QUIT("The first line should be a comment");
+	//Tempo
+	try
+	{
+		songTempo = std::stoul(getSetting("song", "tempo"));
+	}
+	catch (std::exception & e)
+	{
+		ERROR_QUIT("Cannot get song tempo: '" << e.what() << "' -> exiting");
+	}
 
-	_audioFileName = lines[1];
+	//Volume
+	try
+	{
+		_songVolume = std::stof(getSetting("song", "volume"));
+	}
+	catch (std::exception & e)
+	{
+		ERROR_MSG("Cannot get song volume: '" << e.what() << "' -> choosing 1.0 by default");
+		_songVolume = 1.f;
+	}
 
-	if (_audioFileName.empty())
-		ERROR_QUIT("The audio file name is empty");
+	//Background
+	try
+	{
+		_backgroundEnabled = (bool)std::stoi(getSetting("display", "background"));
+	}
+	catch (std::exception & e)
+	{
+		ERROR_MSG("Cannot get background setting: '" << e.what() << "' -> enabling by default");
+		_backgroundEnabled = true;
+	}
 
-	//Get volume
-	if (lines[3][0] != '#')
-		ERROR_QUIT("The fourth line should be a comment");
+	//Mouse
+	try
+	{
+		_replaceSlateByMouse = (bool)std::stoi(getSetting("debug", "mouse"));
+	}
+	catch (std::exception & e)
+	{
+		ERROR_MSG("Cannot get mouse setting: '" << e.what() << "' -> disabling debug feature by default");
+		_replaceSlateByMouse = false;
+	}
 
-	_songVolume = std::stof(lines[4]);
 
-	//Get tempo
-	if (lines[6][0] != '#')
-		ERROR_QUIT("The seventh line should be a comment");
-
-	songTempo = std::stoul(lines[7]);
-
-	//End
-	inputStream.close();
-	DEBUG_MSG("Main parameters successfully loaded: " << _audioFileName << " | " << _songVolume << " | " << songTempo);
+	DEBUG_MSG("Main settings successfully loaded: " << _audioFileName << " | " << _songVolume << " | " << songTempo << " | " << _backgroundEnabled << " | " << _replaceSlateByMouse);
 }
 
 void ofApp::setupSlate()
@@ -178,12 +190,13 @@ void ofApp::update()
 
 	if (_loaded)
 	{
-		#ifndef REPLACE_SLATE_BY_MOUSE
+		if (!_replaceSlateByMouse)
+		{
 			//_slate->fetchPoints();
 			std::deque<ofVec2f> points = _slate->fetchPoints();
 			for (auto p = points.rbegin(); p != points.rend(); p++)
 				receivePoint(*p);
-		#endif
+		}
 
 		_parts[_partNum]->update();
 	}
@@ -194,8 +207,9 @@ void ofApp::draw()
 {
 	if (_loaded)
 	{
-#ifdef ENABLE_BACKGROUND
-		_background.begin();
+		if (_backgroundEnabled)
+		{
+			_background.begin();
 
 			_background.setUniform1f("time", ofGetElapsedTimef()*0.3);
 			_background.setUniform2f("resolution", WIDTH, HEIGHT);
@@ -204,11 +218,13 @@ void ofApp::draw()
 			ofSetColor(1, 1, 1);
 			ofRect(0, 0, WIDTH, HEIGHT);
 
-		_background.end();
-#else
-		ofSetColor(0);
-		ofRect(0, 0, WIDTH, HEIGHT);
-#endif
+			_background.end();
+		}
+		else
+		{
+			ofSetColor(0);
+			ofRect(0, 0, WIDTH, HEIGHT);
+		}
 
 		_parts[_partNum]->draw();
 	}
@@ -229,10 +245,11 @@ void ofApp::keyReleased(int key)
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y)
 {
-	#ifdef REPLACE_SLATE_BY_MOUSE
+	if (_replaceSlateByMouse)
+	{
 		ofVec2f pt(x, y);
 		receivePoint(pt);
-	#endif
+	}
 }
 
 //--------------------------------------------------------------

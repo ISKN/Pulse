@@ -20,8 +20,11 @@ The user first learns to keep the beat and then is allowed to play drums on top 
   3. link to iskn API (Pulse/src/Slate/ISKN_API) and don't forget to copy the shared lib to your PATH or next to the binary (which should be in Pulse/bin)
  
 ### How to use
-Place the Slate in landscape mode with the buttons behind it, compile and run.
-If you want to change the song, go to Pulse/bin/data and edit settings.ini.
+Place the Slate in landscape mode with the buttons behind it and run the program.
+
+### Change settings
+To change the settings, you can go to 'bin/data/settings.xml' and edit the file.  
+However, you can also use the Easy Settings Tool to change the settings with a nice GUI.
 
 ### Remarks about changing the song
 There are a few things you should take care of when setting up another song:
@@ -29,6 +32,7 @@ There are a few things you should take care of when setting up another song:
 * You must know the tempo (only for level 1)
 * The format should be mp3, aif or wav (refer to the openFrameworks documentation for more information)
 * The audio file should start on a "beat", meaning that it shouldn't have a few milliseconds of silence or noise for example, or the score might not be correctly evaluated (only for level 1)
+To know if the song is well synchronized, you can open the settings and activate the "tick" option in the debug panel. This will periodically play a sound in level 1 which will allow you to check the phase.
 
 ### License
 This example is licensed under the Do What The Fuck You Want Public License.
@@ -38,10 +42,10 @@ This example is licensed under the Do What The Fuck You Want Public License.
 Make sure you followed all the steps described in "installation" (downloaded openFrameworks, copied the addons, linked to the api, etc.).  
   
 **The example starts but immediately exits.**  
-You have to plug the Slate in, or the program will close. If the Slate is indeed connected to your computer, make sure you have the drivers installed (on Windows). Otherwise, fill in a bug report.  
- 
+You have to plug the Slate in, or the program will close. If the Slate is indeed connected to your computer, make sure you have the drivers installed (on Windows). Otherwise, check the logs and/or fill in a bug report.  
+
 **I want to try the example but I don't have my Slate.**  
-Go to 'src/general.h' and uncomment `#define REPLACE_SLATE_BY_MOUSE`. Recompile and run. You will be able to use the software with your mouse replacing the Slate.
+Open the settings and enable the "replace Slate by mouse" option. You will be able to use the software with your mouse replacing the Slate.
 
 **The example starts but it doesn't look like the screenshot and there is no sound.**  
 Verify that the 'data' folder located in 'Pulse/bin' is next to your binary. It contains all the resources the program needs to correctly run.
@@ -51,12 +55,12 @@ First make sure the Slate is correctly oriented (landscape mode, buttons on the 
 
 **The program is slow.**  
 Maybe your GPU isn't powerful enough. If you're on a laptop, you can try forcing your PC to use the GPU instead of the chipset (on windows: right click -> run with graphics processor).
-If it's still too slow, open 'src/general.h' and comment `#define ENABLE_BACKGROUND`. Recompile and run. This will disable the background, which is probably the source of your problems.
+If it's still too slow, open the settings and disable the background. This will probably fix your problem.
 
 ### TODO
 * Finish commenting stuff
 * Set the OS X project up and make a release version
-* Make a small tool to change the song, detect its tempo and synchronize it with a simple GUI
+* Add a tempo detection feature to the settings tool
 
 ## How it works
 

@@ -42,6 +42,8 @@ class ofApp : public ofBaseApp
 		void getMainParams();							//Parses the settings file and extracts the parameters.
 		std::string _audioFileName;						//Path to the song file.
 		float _songVolume;								//Volume of the song (useful to better hear the drums for instance).
+		bool _backgroundEnabled;						//Boolean which enables or hides the background for performance issues.
+		bool _replaceSlateByMouse;						//Boolean to prevent from using the Slate for debug purposes.
 
 		//Misc
 		ofxSplashScreen splashScreen;					//Splash screen addon (doesn't always work for whatever reason).

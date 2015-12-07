@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<PulseSettings>
+ <song tempo="160" path="music/happy.mp3" volume="0.9"/>
+ <display background="1" height="900" width="1600" fullscreen="1"/>
+ <debug tick="0" mouse="0"/>
+</PulseSettings>

@@ -32,14 +32,7 @@
 /**********************************/
 
 //Display
-#define WINDOW_WIDTH 1600
-#define WINDOW_HEIGHT 900
 #define USE_SPLASH_SCREEN //Displays the iskn logo while the software starts
-#define FULLSCREEN_MODE
-#define ENABLE_BACKGROUND
-
-//Slate
-//#define REPLACE_SLATE_BY_MOUSE //If enabled, the slate won't be used and will be replaced by the mouse
 
 //Fonts
 #define FONT_REGULAR "fonts/Muli-Regular.ttf"
@@ -153,5 +146,8 @@ extern "C"
         } while( 0 ); \
     }
 } //extern C
+
+//Function to grab settings
+std::string getSetting(std::string const & category, std::string const & attribute);
 
 #endif

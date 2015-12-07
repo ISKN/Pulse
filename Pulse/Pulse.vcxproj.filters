@@ -68,6 +68,9 @@
     <ClCompile Include="src\Common\Circle.cpp">
       <Filter>src\Common</Filter>
     </ClCompile>
+    <ClCompile Include="src\general.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
